@@ -45,11 +45,11 @@ export default {
         'xxxs': '.4rem',
       },
       colors: {
-        'c1': '#CFDBD5',
-        'c2': '#E8EDDF',
-        'c3': '#F5CB5C',
-        'c4': '#242423',
-        'c5': '#333533',
+        'noir': '#1E0F1C',
+        'rouge': '#A7001E',
+        'main': '#E2E9C0',
+        'vert': '#7AA95C',
+        'marron': '#955149',
       },
 
       fontFamily: {
