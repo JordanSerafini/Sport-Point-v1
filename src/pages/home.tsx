@@ -11,7 +11,7 @@ function Home() {
   const getAllInfos = async () => {
     try {
       const response = await axios.get(`${url.local}/informations`);
-      console.log(response);
+      console.log(response.data);
       setInfos(response.data);  
     } catch (error) {
       console.error(error);
@@ -28,6 +28,7 @@ function Home() {
       <ul>
         {infos.map((info) => (
           <li key={info.id}>{info.name}</li>
+          
         ))}
       </ul>
     </div>
