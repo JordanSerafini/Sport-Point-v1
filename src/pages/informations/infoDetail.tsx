@@ -48,7 +48,7 @@ function InfoDetail() {
                 <p>{infos[0].adresse}</p>
                 <p>{infos[0].type}</p>
             </div>
-            <HomeBtn />
+            <HomeBtn css="" />
      
     </div>
 
