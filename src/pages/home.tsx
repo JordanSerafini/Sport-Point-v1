@@ -4,14 +4,13 @@ import GlobalContext from "../context/globalContext";
 import axios from "axios";
 import url from "../url/url";
 import MapView from "../pages/mapView";
-import { Link } from "react-router-dom";
 import AddBtn from "../components/buttons/addBtn";
 
 
 
 function Home() {
 
-  const { infos, setInfos } = useContext(GlobalContext); 
+  const {  setInfos } = useContext(GlobalContext); 
 
 
   const getAllInfos = async () => {
