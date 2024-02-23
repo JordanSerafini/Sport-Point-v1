@@ -46,7 +46,7 @@ const MapView = () => {
   };
 
   return (
-    <div className="flex flex-col items-center gap-4 pt-4 bg-gray-100">
+    <div className="flex flex-col items-center gap-4 pt-4 ">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
@@ -66,7 +66,7 @@ const MapView = () => {
       </form>
       <MapContainer
         className="border-8 rounded-xl border-vert"
-        style={{ height: "70vh", width: "90%" }}
+        style={{ height: "55vh", width: "90%" }}
       >
         <ChangeView center={center} zoom={zoom} />
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
@@ -83,7 +83,7 @@ const MapView = () => {
           </Marker>
         ))}
       </MapContainer>
-      <AddBtn css='' text="Ajouter un lieu" onClick={handleAdd}/>
+      <AddBtn css='mt-6' text="Ajouter un lieu" onClick={handleAdd}/>
 
     </div>
   );

@@ -26,7 +26,7 @@ function Home() {
 
 
   return (
-    <div className="  h-9/10 w-screen">
+    <div className=" bg-gray-100 h-screen w-screen">
       <MapView />
 
   
