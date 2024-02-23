@@ -1,10 +1,8 @@
 import { useContext, useEffect } from "react";
-import { useNavigate } from "react-router-dom";
 import GlobalContext from "../context/globalContext";
 import axios from "axios";
 import url from "../url/url";
 import MapView from "../pages/mapView";
-import AddBtn from "../components/buttons/addBtn";
 
 
 
@@ -26,17 +24,11 @@ function Home() {
     getAllInfos();
   },[]);  
 
-  const navigate = useNavigate();
-
-  const handleAdd = () => {
-    navigate("/add");
-  };
 
   return (
-    <div className=" bg-gray-100 h-screen w-screen">
+    <div className="  h-9/10 w-screen">
       <MapView />
 
-        <AddBtn css='fixed right-0 mt-4' text="Ajouter un lieu" onClick={handleAdd}/>
   
     </div>
   );

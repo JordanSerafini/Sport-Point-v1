@@ -1,6 +1,8 @@
 import React, { useContext, useState } from "react";
 import { MapContainer, TileLayer, Marker, Popup, useMap } from "react-leaflet";
 import GlobalContext from "../context/globalContext";
+import AddBtn from "../components/buttons/addBtn";
+import { useNavigate } from "react-router-dom";
 
 import coordinateService from "../services/coordinateService";
 
@@ -21,6 +23,9 @@ const MapView = () => {
   const [center, setCenter] = useState<[number, number]>([45.899247, 6.129384]);
   const zoom = 13;
 
+
+  const navigate = useNavigate();
+
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (adresse.trim() !== "") {
@@ -36,17 +41,26 @@ const MapView = () => {
     console.log(e);
   };
 
+  const handleAdd = () => {
+    navigate("/add");
+  };
+
   return (
-    <div className="flex flex-col items-center gap-4 pt-4">
+    <div className="flex flex-col items-center gap-4 pt-4 bg-gray-100">
       <form onSubmit={handleSubmit}>
         <input
           type="text"
           value={adresse}
           onChange={(e) => setAdresse(e.target.value)}
           placeholder="Chercher une ville"
-          className="text-center h-[10vh] align-middle border-2 border-vert rounded-3xl w-9/10"
+          className="
+          text-center h-10 align-middle border-2 border-vert rounded-3xl w-9/10
+          "
         />
-        <button type="submit" className="btn">
+        <button type="submit" 
+        className="
+        btn
+        ">
           Rechercher
         </button>
       </form>
@@ -69,6 +83,8 @@ const MapView = () => {
           </Marker>
         ))}
       </MapContainer>
+      <AddBtn css='' text="Ajouter un lieu" onClick={handleAdd}/>
+
     </div>
   );
 };
