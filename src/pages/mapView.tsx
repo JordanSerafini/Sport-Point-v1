@@ -65,8 +65,8 @@ const MapView = () => {
         </button>
       </form>
       <MapContainer
-        className="border-8 rounded-xl border-vert"
-        style={{ height: "55vh", width: "90%" }}
+        className="border-y-4  border-vert"
+        style={{ height: "55vh", width: "100%" }}
       >
         <ChangeView center={center} zoom={zoom} />
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />
