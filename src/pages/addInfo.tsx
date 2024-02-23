@@ -34,7 +34,7 @@ const AddInfo = () => {
     e.preventDefault();
 
     try {
-      const response = await axios.post(`${url.local}/informations`, formData);
+      const response = await axios.post(`${url.heroku}/informations`, formData);
       console.log(response.data);
       alert("Lieu ajouté avec succès");
     } catch (error) {

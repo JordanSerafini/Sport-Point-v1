@@ -15,7 +15,7 @@ function Home() {
 
   const getAllInfos = async () => {
     try {
-      const response = await axios.get(`${url.local}/informations`);
+      const response = await axios.get(`${url.heroku}/informations`);
       setInfos(response.data);  
     } catch (error) {
       console.error(error);
