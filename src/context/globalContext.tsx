@@ -18,7 +18,7 @@ interface Info {
 }
 
 interface GlobalContextState {
-  infos: Info[]; 
+  infos:Info[]; 
   showToast: (msg: string, options?: ToastOptions) => void;
   setInfos: React.Dispatch<React.SetStateAction<Info[]>>; 
 }

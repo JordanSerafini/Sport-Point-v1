@@ -36,9 +36,9 @@ const MapView = () => {
     }
   };
 
-  const detailClick = (e: React.MouseEvent) => {
+  const detailClick = (e: React.MouseEvent, id: number) => {
     e.preventDefault();
-    console.log(e);
+    navigate(`/informations/${id}`);
   };
 
   const handleAdd = () => {
@@ -76,7 +76,7 @@ const MapView = () => {
               {info.name}
               <br />
               {info.description}
-              <a href="" onClick={detailClick}>
+              <a href=""  onClick={(e) => detailClick(e, info.id)}>
                 plus de détail
               </a>
             </Popup>

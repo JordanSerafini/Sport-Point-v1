@@ -3,6 +3,7 @@ import { GlobalProvider } from "./context/globalContext";
 
 import Home from "./pages/home";
 import AddInfo from "./pages/addInfo";
+import InfoDetail from "./pages/informations/infoDetail";
 
 import 'leaflet/dist/leaflet.css';
 
@@ -16,6 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/add" element={<AddInfo />} />
+            <Route path="/informations/:id" element={<InfoDetail />} />
           </Routes>
         </Router>
       </GlobalProvider>
