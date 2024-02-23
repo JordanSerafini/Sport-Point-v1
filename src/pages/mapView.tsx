@@ -44,15 +44,15 @@ const MapView = () => {
           value={adresse}
           onChange={(e) => setAdresse(e.target.value)}
           placeholder="Chercher une ville"
-          className="text-center h-[10vh] align-middle border-2 border-marron rounded-3xl w-9/10"
+          className="text-center h-[10vh] align-middle border-2 border-vert rounded-3xl w-9/10"
         />
         <button type="submit" className="btn">
           Rechercher
         </button>
       </form>
       <MapContainer
-        className="border-2 border-marron"
-        style={{ height: "70vh", width: "100%" }}
+        className="border-8 rounded-xl border-vert"
+        style={{ height: "70vh", width: "90%" }}
       >
         <ChangeView center={center} zoom={zoom} />
         <TileLayer url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png" />

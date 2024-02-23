@@ -33,7 +33,7 @@ function Home() {
   };
 
   return (
-    <div className=" bg-main h-screen w-screen">
+    <div className=" bg-gray-100 h-screen w-screen">
       <MapView />
 
         <AddBtn css='fixed right-0 mt-4' text="Ajouter un lieu" onClick={handleAdd}/>
