@@ -1,5 +1,5 @@
 const coordinateService = {
-    getAdressCoordinate: async (adresse) => {
+    getAdressCoordinate: async (adresse: unknown) => {
         let error;
         let latitude;
         let longitude;
