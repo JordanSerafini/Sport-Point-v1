@@ -26,12 +26,7 @@ function Home() {
 
 
   return (
-    <div>
-      <ul>
-        {infos.map((info) => (
-          <li key={info.id}>{info.name}</li>
-        ))}
-      </ul>
+    <div className="p-2 bg-main">
       <MapView />
     </div>
   );
